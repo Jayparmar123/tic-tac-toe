@@ -39,10 +39,10 @@ boxes.forEach((box) => {
             chance = true;
         }
         message.innerHTML = `${chance ? '❌' : '⭕'}'s Turn`;
-        checkWinner();
-        box.style.rotate = "360deg";
-        box.disabled = true;
         counter++;
+        box.disabled = true;
+        box.style.rotate = "360deg";
+        checkWinner();
     })
 })
 
