@@ -52,7 +52,7 @@ let checkWinner = () => {
         let pattern2 = boxes[winner[1]].innerHTML;
         let pattern3 = boxes[winner[2]].innerHTML;
 
-        if(pattern1 !== "" && pattern2 !== "" && pattern3 !== ""){
+        if(pattern1 !== "" && pattern1 === pattern2 && pattern2 === pattern3){
             winner.forEach(i => boxes[i].style.background = "limegreen");
             boxes.forEach((box) => box.disabled = true);
             message.innerHTML = `The Winner is ${pattern1}`;
